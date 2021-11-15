@@ -15,6 +15,7 @@ $secondary: #a1a1a1;
 $green: #e6f5e2;
 $purple: #b5076b;
 $gray-800: #000000;
+$pink: #f6e7da;
 
 // Grid containers
 //
@@ -25,6 +26,20 @@ $container-max-widths: (
         lg: 960px,
         xl: 1170px
 ) !default;
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1280px
+) !default;
+
 
 
 

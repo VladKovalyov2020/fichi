@@ -34,7 +34,6 @@ $container = get_theme_mod( 'understrap_container_type' );
                 </div>
             <?php endif; ?>
 
-
                 <?php wp_nav_menu(
                     array(
                         'menu' => 'header',
@@ -45,7 +44,6 @@ $container = get_theme_mod( 'understrap_container_type' );
                         'link_before' => '<span class="nav-link px-2">',
                         'link_after' => '</span>',
                     )); ?>
-
 
             <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarMenuContent" aria-controls="navbarMenuContent"
@@ -69,5 +67,4 @@ $container = get_theme_mod( 'understrap_container_type' );
             </div>
         </nav>
     </div>
-
 </header>
