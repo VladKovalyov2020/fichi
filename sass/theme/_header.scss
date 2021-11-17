@@ -4,6 +4,10 @@
     padding-top: 25px;
   }
 
+  @include media-breakpoint-down(sm) {
+    padding-top: 0;
+  }
+
   &__content {
     position: absolute;
     top: 52px;

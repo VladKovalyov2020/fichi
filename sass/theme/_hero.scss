@@ -7,6 +7,10 @@
     padding-bottom: 80px;
   }
 
+  @include media-breakpoint-down(sm) {
+    padding-bottom: 15px;
+  }
+
   &__content {
     padding-right: 85px;
 
@@ -22,6 +26,7 @@
 
     @include media-breakpoint-down(sm) {
       padding-bottom: 0;
+      padding-left: 30px;
     }
   }
 
@@ -45,8 +50,8 @@
     }
 
     @include media-breakpoint-down(sm) {
-      padding-top: 50px;
       font-size: 30px;
+      padding-top: 115px;
     }
   }
 
@@ -131,7 +136,7 @@
     }
 
     @include media-breakpoint-down(sm) {
-      bottom: 330px;
+      bottom: 260px;
       left: -52px;
     }
 

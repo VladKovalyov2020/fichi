@@ -107,6 +107,55 @@ get_header();
             </div>
         </section>
 
+        <section class="about" id="about">
+            <div class="container">
+                <div class="row about__container">
+                    <div class="about__image col-12 col-lg-6">
+                        <div class="text-center">
+                            <?php
+                            $image = get_field('about_section_image');
+                            if( !empty( $image ) ): ?>
+                                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                            <?php endif; ?>
+                        </div>
+                    </div>
+
+                    <div class="about__content col-12 col-lg-6">
+                        <?php if ($about_section_subtitle = get_field('about_section_subtitle')): ?>
+                            <p class="about__subtitle text-uppercase text-primary "><?php echo $about_section_subtitle ?></p>
+                        <?php endif; ?>
+
+                        <?php if ($about_section_title = get_field('about_section_title')): ?>
+                            <h2 class="about__title"><?php echo $about_section_title ?></h2>
+                        <?php endif; ?>
+
+                        <?php if ($about_section_content = get_field('about_section_content')): ?>
+                            <?php echo $about_section_content ?>
+                        <?php endif; ?>
+
+                        <div class="row">
+                            <?php if ($about_section_bottom_text = get_field('about_section_bottom_text')): ?>
+                                <p class="bottom-text col-12 col-xl-5 text-uppercase"><?php echo $about_section_bottom_text ?></p>
+                            <?php endif; ?>
+
+                            <div class="col-12 col-xl-7 d-flex mb-3">
+                                <?php if( have_rows('about_section_icons')): ?>
+                                    <?php while( have_rows('about_section_icons')) : the_row();
+                                        $about_icon = get_sub_field('icon'); ?>
+                                        <div class="bottom-icon">
+                                            <img src="<?php echo $about_icon ; ?>">
+                                        </div>
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
     <?php endwhile; ?>
 <?php endif; ?>
 

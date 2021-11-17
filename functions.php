@@ -51,3 +51,5 @@ if ( function_exists( 'acf_add_options_page' ) ) {
         'redirect'   => false
     ) );
 }
+
+add_image_size( 'about_section_image', 603, 528, true );
