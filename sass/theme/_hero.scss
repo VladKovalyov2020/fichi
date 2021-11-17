@@ -1,4 +1,149 @@
 .hero {
   position: relative;
-  min-height: 200px;
+  padding-bottom: 50px;
+  overflow-x: hidden;
+
+  @include media-breakpoint-down(lg) {
+    padding-bottom: 80px;
+  }
+
+  &__content {
+    padding-right: 85px;
+
+    @include media-breakpoint-down(xl) {
+      padding-right: 0;
+      padding-left: 30px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      padding-left: 60px;
+      padding-bottom: 250px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 0;
+    }
+  }
+
+  &__title {
+    padding-top: 247px;
+    font-family: Asul-Bold, sans-serif;
+    font-size: 60px;
+    font-weight: 100;
+    line-height: 1.06;
+    letter-spacing: -1.9px;
+    margin-bottom: 19px;
+
+    @include media-breakpoint-down(lg) {
+      padding-top: 150px;
+      font-size: 30px;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding-top: 100px;
+      font-size: 40px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 50px;
+      font-size: 30px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 51px;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__button {
+    .btn {
+      padding: 13px 47px;
+      margin-bottom: 30px;
+
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 15px;
+      }
+    }
+
+    .button-purple {
+      margin-right: 20px;
+    }
+
+    .button-green {
+      background-color: $green;
+      padding: 13px 36px;
+
+      &:hover {
+        background-color: #e5f7e7;
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__image {
+    position: relative;
+    z-index: -1;
+
+    .hero-img {
+      position: absolute;
+      top: -247px;
+      right: -154px;
+      left: -28px;
+
+      @include media-breakpoint-down(lg) {
+        top: -60px;
+        right: -100px;
+      }
+
+      @include media-breakpoint-down(md) {
+        top: 28px;
+        right: -154px;
+        left: -153px;
+        opacity: 0.9;
+      }
+
+      @include media-breakpoint-down(sm) {
+        position: relative;
+        top: 0;
+        right: 0;
+        left: 15px;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__social-icon {
+    max-width: 15px;
+    margin-top: 150px;
+    margin-left: 88px;
+
+    @include media-breakpoint-down(lg) {
+      position: absolute;
+      bottom: 180px;
+      left: -50px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      bottom: 330px;
+      left: -52px;
+    }
+
+    svg {
+      width: 15px;
+      height: 15px;
+      fill: $secondary;
+      margin-bottom: 20px;
+
+      &:hover {
+        fill: $primary;
+      }
+    }
+  }
 }
